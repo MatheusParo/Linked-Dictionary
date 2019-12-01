@@ -1,5 +1,5 @@
 # Linked Dictionaries
-Project by Matheus Paro and Yuval Cole.
+Project by Matheus and Katya.
 ## Objective
 - [x] Create a program that takes in a file of words and sort them through Linked Lists.
 - [x] Create a new file with the sorted list.
@@ -226,3 +226,29 @@ Finally it was achieved with only 5 seconds.
 | Linked list separated by alphabet | 38 mins |
 | Linked list for each letter       | 26 mins |
 | Linked list for each letter + iterator      | 5.5 seconds |
+
+## Coding Principles
+In order to make sure that the code is concise, understandable and scalable we have adopted 7 coding principles. Since our code from the beggining already complied with some of the coding principles, I will explain what we developed in each principle.
+
+### #1 Meaningful Names
+We from the beggining resorted to meaningful names for functions and variables, these include methods such as: *createLinkedLists()*, *sortLinkedLists()*, *writeNewFile()*, *talkToConsole()* and *getPosition()*.
+This made the code readible to anyone so that they know what the code is doing.
+
+### #2 Keep Functions Small
+We made sure that every function in our program was only for one action. This is because if we would like to time it and optimize it would be done individually. This is why instead of having a funcion that would read the unsorted document and the one that would write and sort are completely different functions that are only called when needed.
+
+### #3 Avoid Redundant Comments
+We decided to use comments as a form of keeping out old code in the back of our head when writing the newer vesion. Therefore we would comment the previous results that were derived from that specific function. For instance: //1075ms;--- with list iterator = 180ms
+This gave us insights of how the method performed before and after, therefore insteade of using the comments for description, it would gives us other insights.
+
+### #4 Single Responsibility Principle
+All of our methods are only called when its supposed to be and it closes itself when its job is done. Every single part of the process is trackable since they are compartamentalized into their own methods: *createLinkedLists()*, *sortLinkedLists()*, *writeNewFile()*, *talkToConsole()* and *getPosition()*.
+
+### #5 Don't Repeat Yourself
+The function *getPosition()* shows this principle into action it will be called multiple times with each sorting. But since it is its own method it is called only when is needed and doesnt have to be repeated multiple times.
+
+### #6 Keep Your Code Simple
+The simplicity of the code comes to the principle of how you can see the flow of the program. This is why we chose the main to be a caller whilst all of the functions are under it. For each function that the main calls, you can clearly see how it works by scrolling to the function. 
+
+### #7 You Ain't Gonna Need It
+As for YAGNI, the only time we had to scrap code was when using the List iterator, we had to change the variables used and the for loops that we were preciously using, they got replaced by better and faster code.
